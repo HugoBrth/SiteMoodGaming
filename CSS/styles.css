@@ -1,0 +1,431 @@
+@import url('http://fonts.cdnfonts.com/css/akira-expanded');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
+/* NAV */
+
+.nav {
+	display: flex;
+	align-items: center;
+	padding: 0 5% 0 5%;
+	position: relative;
+}
+
+.logo {
+	size: 130px;
+}
+
+.logo-container {
+	margin: auto auto auto -30px;
+}
+
+.box {
+	right: -500px;
+}
+
+.onglets {
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	left: 15%;
+}
+
+.btnNav1::after, .btnNav2::after, .btnNav3::after, .btnNav4::after {
+	content: "";
+	height: 2px;
+	background: white;
+	width: 0%;
+	position: absolute;
+	bottom: -5px;
+	left: -2.5%;
+	transition: width .3s ease-in-out;
+}
+
+.btnNav1:hover::after, .btnNav2:hover::after, .btnNav3:hover::after, .btnNav4:hover::after {
+	width: 105%;
+}
+
+.btnNav1, .btnNav2, .btnNav3, .btnNav4 {
+	font-family: 'Akira Expanded', sans-serif;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	position: relative;
+}
+
+/* Ligne de decoration nav */
+
+.nav::before, .nav::after {
+	content: "";
+	width: 53%;
+	height: 3px;
+	position: absolute;
+	z-index: -1;
+} 
+.nav::before {
+	left: 0;
+	bottom: 25px; 
+	background: linear-gradient(to left, transparent,  #FF1756 , #FF99BA 99%);
+	border-top-right-radius: 100%;
+	border-bottom-right-radius: 100%;
+}
+ .nav::after {
+	right: 0;
+	top: 25px;
+	background: linear-gradient(to right, transparent,  #FF1756 , #FF99BA 99%);
+	border-top-left-radius: 100%;
+	border-bottom-left-radius: 100%;
+} 
+
+
+
+/* EQUIPE */
+
+.logo_equipes {
+    padding-top: 50px;
+    width: 55%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.e_WildDrift:hover, .e_BrawlStars:hover {
+    transform: scale(1.07);
+}
+
+.e_BrawlStars, .e_WildDrift {
+    transition: .3s ease-in-out;
+}
+
+.fenetre-equipe {
+    visibility: hidden;
+    opacity: 0; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(#616ea5, #09245C);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.equipe-content {
+    background: white;
+    padding: 1.5em 2em;
+    width: 300px;
+    max-width: 40%;
+    border-radius: 20px;
+    position: relative;
+}
+
+.fenetre-equipe-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: gray;
+    font-size: 15px;
+}
+
+.fenetre-equipe:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background: radial-gradient(#616ea5, #09245C);
+	scroll-behavior: smooth; 
+	font-family: 'Kanit', sans-serif; 
+}
+
+/* Marge entre les categories */
+
+#Presentation, #Equipes, #Produits {
+	margin: 75px 0 140px 0 ;
+
+}
+
+										/* CSS pour les textes de presentation et de partenariats */
+
+.zone_texte_presentation, .zone_text_partenaires {
+	padding-top: 50px;
+	margin: auto;
+	width: 85%;
+	background-color: white;
+	padding-bottom: 120px;
+	position: relative;
+	z-index: -1;
+}
+
+.logoSvgBg {
+	z-index: -1;
+	position: absolute;
+	height: 100%;
+	width: auto;
+	margin-bottom: 50px;
+}
+
+.container-svg-bg {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.text_presentation1, .text_partenaires1 {
+	font-size: 40px;
+	font-weight: bolder;
+	width: 60%;
+	margin-left: 10%;
+	color: #ff1656;
+}
+
+.text_presentation2, .text_partenaires2 {
+	line-height: 40px;
+	font-size: 20px;
+	width: 80%;
+	margin-left: 10%;
+	color: #ff1656;
+	text-align: justify;
+}
+
+.text_presentation3 {
+	font-size: 35px;
+	width: fit-content;
+	margin: auto;
+	margin-top: 70px;
+	color: #ff1656;
+}
+
+										/* Categorie Resaux */
+.icon {
+	height: 60px;
+	width: 60px;
+	transition: transform .4s ease;
+}
+
+.icon:hover {
+	transform: scale(1.2);
+}
+
+.resaux {
+	width: 70%;
+	height: 160px;
+	background-color: #ff1656;
+	margin: auto;
+	margin-top: -60px;
+	padding: 20px;
+}
+
+.resaux > p {
+	font-size: 23px;
+	width: fit-content;
+	margin: auto;
+	margin-bottom: 20px;
+	color: white;
+	letter-spacing: 6px;
+}
+
+.iconr {
+	margin: 38px 20px 0 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+										/* CSS de tout les titres */
+
+.titre_equipes, .titre_produits {
+	padding-top: 10px;
+	margin-top: 70px;
+	margin-bottom: 70px;
+	position: relative;
+}
+
+.titre_equipes > p, .titre_produits > p {
+	font-family: 'Akira Expanded', sans-serif;
+	color: white;
+	width: 25%;
+	margin: auto;
+	font-size: 22.5px;
+	width: fit-content;
+}
+
+.titre_equipes::before, .titre_produits::before {
+	content: "";
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background: linear-gradient(to right, #FF99BA, #e0154b , #FF99BA);
+}
+
+.titre_equipes::after, .titre_produits::after {
+	content: "";
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background: linear-gradient(to right, #FF99BA, #e0154b , transparent 30% 70%, #e0154b , #FF99BA);
+}
+
+										/* Catgorie Boutique */
+
+.produits {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.image_produit {
+	background-color: white;
+	height: 280px;
+	display: flex;
+	justify-content: center;
+	border-radius: 20px;
+}
+
+.image_produit > img {
+	display: block;
+	margin: auto;
+}
+
+.info_produit {
+	font-family: 'Kanit', sans-serif;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: auto;
+	width: 93%;
+	height: 25px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.description_produits {
+	font-family: 'Kanit', sans-serif;
+	margin: auto;
+	margin-right: 10px;
+	margin-left: 10px;
+	text-align: justify;
+	padding: 10px;
+}
+
+.produit1, .produit2, .redirection_boutique {
+	position: relative;
+	text-decoration: none;
+	color: white;
+	font-size: 15px;
+	background-color: rgba(15, 35, 109, 0.4);
+	width: 250px;
+	margin-right: 10px;
+	margin-left: 10px;
+	border: 0px solid;
+	border-radius: 20px;
+	top: 0px;
+	transition: top ease 0.5s;
+}
+
+.produit1:hover, .produit2:hover, .redirection_boutique:hover {
+	top: -30px;
+}
+
+.logo_lmn8 {
+	display: block;
+	margin: auto;
+	margin-top: 15px;
+}
+
+										/* Categorie Des Partenaires */
+.partenaire {
+	text-decoration: none;
+	background-color: #182F69;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 10px;
+}
+
+.partenaire > p {
+	text-decoration: none;
+	font-family: 'Kanit', sans-serif;
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.partenaire > img {
+	position: relative;
+	left: 0px;
+	transition: ease 0.3s;
+}
+
+.partenaire > img:hover {
+	left: 10px;
+
+}
+
+@media screen and (max-width:900px){
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.onglets {
+		display: none;
+		visibility: hidden;
+	}
+
+	.box {
+		right: auto;
+	}
+
+	.text_presentation1, .text_partenaires1 {
+		width: 80%;
+	}
+
+
+	.iconr {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.produits {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.produit1, .produit2, .redirection_boutique {
+		margin-top: 50px;
+	}
+
+	.logo_equipes {
+		width: 75%;
+	}
+
+	.logo_equipes > a > img {
+		width: 150px;
+	}
+} 
+
+@media screen and (max-width:1089px){
+	.logoSvgBg {
+		display: none;
+	}
+}
